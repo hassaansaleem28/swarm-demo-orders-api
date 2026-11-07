@@ -2,7 +2,7 @@ const crypto = require('node:crypto');
 
 // Signing keys for development and tests, generated in memory at startup.
 // Production reads its keys from JWT_PRIVATE_KEY and JWT_PUBLIC_KEY instead.
-const DEV_KEY_BITS = 1024;
+const DEV_KEY_BITS = 2048;
 
 function devKeys() {
   return crypto.generateKeyPairSync('rsa', {
